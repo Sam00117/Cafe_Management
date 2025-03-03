@@ -1,4 +1,4 @@
-﻿using DynamicArray;
+using DynamicArray;
 using LinkedList;
 
 namespace Cafeteria_Management;
@@ -17,7 +17,12 @@ public static class AdminMenu
             Console.WriteLine("5. View Order List");
             Console.WriteLine("6. Logout");
 
-            int choice = Convert.ToInt32(Console.ReadLine());
+            string input = Console.ReadLine();
+            if (!int.TryParse(input, out int choice))
+            {
+                Console.WriteLine("Invalid input, please enter a number.");
+                continue;
+            }
 
             switch (choice)
             {
