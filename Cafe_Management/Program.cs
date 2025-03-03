@@ -1,4 +1,4 @@
-﻿using Cafeteria_Management;
+using Cafeteria_Management;
 class Program
 {
     static void Main(string[] args)
@@ -14,28 +14,37 @@ class Program
             Console.WriteLine("1. Admin Login");
             Console.WriteLine("2. Customer Section");
             Console.WriteLine("3. Exit");
-            int choice = Convert.ToInt32(Console.ReadLine());
+            int choice;
+            bool isValidChoice = int.TryParse(Console.ReadLine(), out choice);
 
-            if (choice == 1)
+            if (isValidChoice)
             {
-                Console.Clear();
-                AdminSection(ref menu);
-            }
-            else if (choice == 2)
-            {
-                Console.Clear();
-                CustomerSection(menu);
-            }
-            else if (choice == 3)
-            {
-                Console.Clear();
-                Console.WriteLine("Exiting the system. Goodbye!");
-                break;
+                if (choice == 1)
+                {
+                    Console.Clear();
+                    AdminSection(ref menu);
+                }
+                else if (choice == 2)
+                {
+                    Console.Clear();
+                    CustomerSection(menu);
+                }
+                else if (choice == 3)
+                {
+                    Console.Clear();
+                    Console.WriteLine("Exiting the system. Goodbye!");
+                    break;
+                }
+                else
+                {
+                    Console.Clear();
+                    Console.WriteLine("Invalid choice, please select 1, 2, or 3.");
+                }
             }
             else
             {
                 Console.Clear();
-                Console.WriteLine("Invalid choice, try again.\n");
+                Console.WriteLine("Invalid input, please enter a valid number 1, 2, or 3.");
             }
         }
     }
