@@ -70,6 +70,12 @@ public static class AdminMenu
 
         Console.WriteLine("Enter item name: ");
         string name = Console.ReadLine();
+        if (string.IsNullOrWhiteSpace(name))
+        {
+            Console.WriteLine("Item name cannot be empty. Please enter a valid name.");
+            return;
+        }
+
         bool itemExists = false;
         string categoryName = "";
 
@@ -167,6 +173,11 @@ public static class AdminMenu
 
         Console.WriteLine("Enter item name to update: ");
         string name = Console.ReadLine();
+        if (string.IsNullOrWhiteSpace(name))
+        {
+            Console.WriteLine("Item name cannot be empty. Please enter a valid name.");
+            return;
+        }
 
         Console.WriteLine("Enter new price: ");
         string newPrice = Console.ReadLine();
