@@ -1,4 +1,4 @@
-﻿using LinkedList;
+using LinkedList;
 
 namespace Cafeteria_Management;
 
@@ -20,7 +20,13 @@ public static class CustomerMenu
             Console.WriteLine("6. Delete Item from Order");
             Console.WriteLine("7. View Bill");
             Console.WriteLine("8. Exit");
-            int choice = Convert.ToInt32(Console.ReadLine());
+
+            string input = Console.ReadLine();
+            if (!int.TryParse(input, out int choice))
+            {
+                Console.WriteLine("Invalid input, please enter a number.\n");
+                continue;
+            }
 
             switch (choice)
             {
