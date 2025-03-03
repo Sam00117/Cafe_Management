@@ -9,7 +9,7 @@ public static class AdminMenu
     {        
         while (true)
         {
-            Console.WriteLine("\n--- Admin Menu ---\n");
+            Console.WriteLine("\n--- Admin Section ---\n");
             Console.WriteLine("1. Add Item to Menu");
             Console.WriteLine("2. Remove Item from Menu");
             Console.WriteLine("3. Update Menu");
