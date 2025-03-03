@@ -11,7 +11,7 @@ public static class CustomerMenu
 
         while (true)
         {
-            Console.WriteLine("--- Customer Section ---");
+            Console.WriteLine("--- Customer Menu ---");
             Console.WriteLine("\n1. View Menu");
             Console.WriteLine("2. Sort Menu");
             Console.WriteLine("3. Search Menu");
