@@ -12,7 +12,7 @@ class Program
         {
             Console.WriteLine("\nSelect an option:");
             Console.WriteLine("1. Admin Login");
-            Console.WriteLine("2. Customer Section");
+            Console.WriteLine("2. Customer Menu");
             Console.WriteLine("3. Exit");
             int choice = Convert.ToInt32(Console.ReadLine());
 
